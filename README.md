@@ -1,4 +1,4 @@
-# shadow-v2ray
+# shadowray
 
 基于centos 8镜像制作，目前版本为v0.4，基于shadowsocks-libev v3.3.4 + v2ray-plugin v1.3.1。
 
@@ -6,12 +6,12 @@
 
 ## 服务器镜像
 
-地址：[https://hub.docker.com/repository/docker/wbuntu/shadow-v2ray](https://hub.docker.com/repository/docker/wbuntu/shadow-v2ray)
+地址：[https://hub.docker.com/repository/docker/wbuntu/shadowray](https://hub.docker.com/repository/docker/wbuntu/shadowray)
 
 使用方法：
 
 ```shell
-docker run -d --restart always --network host --name ss-server -v /etc/shadowsocks-libev/config.json:/etc/shadowsocks-libev/config.json docker.io/wbuntu/shadow-v2ray:v0.3
+docker run -d --restart always --network host --name ss-server -v /etc/shadowsocks-libev/config.json:/etc/shadowsocks-libev/config.json docker.io/wbuntu/shadowray:v0.3
 ```
 
 程序位于caddy或nginx之后，caddy自带TLS证书管理，配置示例如下
@@ -46,12 +46,12 @@ test.example.com {
 
 ## 客户端镜像
 
-地址：[https://hub.docker.com/repository/docker/wbuntu/shadow-v2ray-client](https://hub.docker.com/repository/docker/wbuntu/shadow-v2ray-client)
+地址：[https://hub.docker.com/repository/docker/wbuntu/shadowray-client](https://hub.docker.com/repository/docker/wbuntu/shadowray-client)
 
 使用方法：
 
 ```shell
-docker run -d --restart always --network host --name ss-local -v /etc/shadowsocks-libev/config.json:/etc/shadowsocks-libev/config.json docker.io/wbuntu/shadow-v2ray-client:v0.3
+docker run -d --restart always --network host --name ss-local -v /etc/shadowsocks-libev/config.json:/etc/shadowsocks-libev/config.json docker.io/wbuntu/shadowray-client:v0.3
 ```
 
 **/etc/shadowsocks-libev/config.json** 文件示例
