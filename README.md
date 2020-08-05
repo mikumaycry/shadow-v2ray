@@ -1,10 +1,8 @@
 # shadow-v2ray
 
-基于shadowsocks-libev的alpine镜像，添加了v2ray-plugin插件。
+基于centos 8镜像制作，目前版本为v0.4，基于shadowsocks-libev v3.3.4 + v2ray-plugin v1.3.1。
 
-目前版本为v0.3，基于shadowsocks-libev v3.3.4 + v2ray-plugin v1.3.1。
-
-下面是配置示例，涉及的域名、path、IP、密码、加密方式等，自行替换为自用的参数。
+下面是配置示例，涉及的域名、path、IP、密码、加密方式等，请替换为自用的参数。
 
 ## 服务器镜像
 
