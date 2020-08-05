@@ -1,0 +1,11 @@
+FROM docker.io/shadowsocks/shadowsocks-libev:v3.3.4
+
+USER root
+
+RUN apk add --no-cache curl \
+    && curl -L https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.1/v2ray-plugin-linux-amd64-v1.3.1.tar.gz | tar -zx \
+    && mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
+
+USER nobody
+
+CMD ["/usr/bin/ss-server","-c","/etc/shadowsocks-libev/config.json"]
